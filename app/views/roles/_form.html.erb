@@ -1,0 +1,15 @@
+<%= form_for @role do |f| %>
+    <div class="mb-2">
+      <span>Name:</span>
+      <%= f.text_field :name, required: true, class: 'custom-width' %>
+    </div>
+    
+    <div class="mb-2">
+      <%= f.submit 'Create Role', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+  
+  <div class="mb-2">
+    <%= link_to 'Back to List', roles_path, class: 'btn btn-secondary' %>
+  </div>
+  

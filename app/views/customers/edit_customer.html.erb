@@ -1,0 +1,25 @@
+<div class="conatiner">
+<h5> update profile </h5>
+<%= form_for :customer, url: manage_customer_path, method: :post do |f| %>
+ <div class="mb-2" >
+ <span> email: </span>
+ <%= f.email_field :email, value: current_admin.email, required: true %>
+ </div>
+ <div class="mb-2" >
+ <span> username: </span>
+ <%= f.text_field :username, value: current_admin.username, required: true %>
+ </div>
+ <div class="mb-2" >
+ <span> first name: </span>
+ <%= f.text_field :first_name, value: current_admin.first_name, required: true %>
+ </div>
+ <div class="mb-2" >
+ <span> last name: </span>
+ <%= f.text_field :last_name, value: current_admin.last_name, required: true %>
+ </div>
+ <div class="mb-2" >
+ <%= f.submit 'update profile' %>
+ </div>
+ 
+    <% end %>
+</div>
